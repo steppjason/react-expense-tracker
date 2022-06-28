@@ -20,8 +20,47 @@ body {
 	color: black;
 	border-radius: 5px;
 	box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.11);
-	max-width: 80%;
+	max-width: 900px;
 	margin: 2rem auto;
+}
+
+.chart {
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  height: 10rem;
+}
+
+.chart-bar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart-bar__inner {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #c7c7c7;
+  border-radius: 12px;
+  background-color: #daf0ff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.chart-bar__fill {
+  background-color: rgb(85 126 231);
+  width: 100%;
+  transition: all 0.3s ease-out;
+}
+
+.chart-bar__label {
+  font-weight: bold;
+  font-size: 0.7rem;
+  text-align: center;
 }
 
 .expense-form {
@@ -69,7 +108,7 @@ body {
 	border-radius: 5px;
 }
 
-.expense-item {
+.expense-item, .expense-item__empty {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -79,7 +118,9 @@ body {
 	padding: 10px 20px;
 }
 
-.expense-item:nth-child(odd) {
+
+
+.expense-item:nth-child(even) {
 	background-color: rgba(0, 0, 0, 0.034);
 }
 

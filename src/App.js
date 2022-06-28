@@ -1,10 +1,10 @@
 import Card from "./components/UI/Card"
 import Expenses from "./components/Expenses/Expenses"
 import NewExpense from "./components/NewExpense/NewExpense"
-import { useState } from 'react'
+import ExpensesChart from "./components/Expenses/ExpensesChart"
+import { useState } from "react"
 
 function App() {
-
 	const DUMMY_DATA = [
 		{
 			id: 1,
@@ -14,16 +14,16 @@ function App() {
 		},
 		{
 			id: 2,
-			title: "Test",
-			date: new Date(2022, 3, 22),
-			amount: 15.97,
+			title: "Television",
+			date: new Date(2022, 5, 21),
+			amount: 599.99,
 		},
 	]
 
 	const [expenses, setExpenses] = useState(DUMMY_DATA)
 
 	const addExpenseHandler = (expense) => {
-		setExpenses(prevExpenses => {
+		setExpenses((prevExpenses) => {
 			return [expense, ...prevExpenses]
 		})
 	}
@@ -32,6 +32,9 @@ function App() {
 		<div>
 			<Card>
 				<NewExpense onAddExpense={addExpenseHandler} />
+			</Card>
+			<Card>
+				<ExpensesChart expenses={expenses} />
 			</Card>
 			<Card>
 				<Expenses expenses={expenses}></Expenses>
