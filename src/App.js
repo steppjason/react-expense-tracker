@@ -29,7 +29,8 @@ function App() {
 	}
 
 	return (
-		<div>
+		<div className="wrapper">
+			<h2>Expense Report</h2>
 			<Card>
 				<NewExpense onAddExpense={addExpenseHandler} />
 			</Card>

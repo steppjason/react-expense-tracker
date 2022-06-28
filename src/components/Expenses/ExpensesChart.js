@@ -22,8 +22,6 @@ function ExpensesChart(props) {
 		dataPoints[expenseMonth].value += expense.amount
 	}
 
-	console.log(dataPoints)
-
 	return (
 		<Chart dataPoints={dataPoints} />
 	)
