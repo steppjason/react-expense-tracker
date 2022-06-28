@@ -9,13 +9,13 @@ function App() {
 		{
 			id: 1,
 			title: "Toilet Paper",
-			date: new Date(2022, 3, 22),
+			date: '2022-12-4',
 			amount: 15.97,
 		},
 		{
 			id: 2,
 			title: "Television",
-			date: new Date(2022, 5, 21),
+			date: '2022-5-21',
 			amount: 599.99,
 		},
 	]

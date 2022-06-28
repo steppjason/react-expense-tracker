@@ -27,7 +27,7 @@ function ExpenseForm(props) {
 		setData((prevState) => {
 			return {
 				...prevState,
-				amount: e.target.value,
+				amount: +e.target.value,
 			}
 		})
 	}
@@ -46,7 +46,6 @@ function ExpenseForm(props) {
 			}
 		})
 
-		console.log(e.target.value)
 	}
 
 	const clearFormData = () => {
