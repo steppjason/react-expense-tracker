@@ -34,18 +34,26 @@ function ExpenseForm(props) {
 
 	const dateChangeHandler = (e) => {
 		setData((prevState) => {
+
+			let newDate = new Date(e.target.value)
+			const month = newDate.toLocaleString("en-US", { month: "2-digit" })
+			const day = newDate.toLocaleString("en-US", { day: '2-digit' })
+			const year = newDate.getFullYear();
+
 			return {
 				...prevState,
-				date: e.target.value,
+				date: [year, month, day].join('-'),
 			}
 		})
+
+		console.log(e.target.value)
 	}
 
 	const clearFormData = () => {
 		setData({
-			title: "",
-			amount: "",
-			date: "",
+			title: '',
+			amount: '',
+			date: '',
 		})
 	}
 

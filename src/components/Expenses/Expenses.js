@@ -1,11 +1,11 @@
 import ExpenseItem from "./ExpenseItem"
 
 function Expenses(props) {
-	
-
 	return (
 		<div className="expenses">
-			<ExpenseItem title={props.expenses[0].title} date={props.expenses[0].date} amount={props.expenses[0].amount} />
+			{props.expenses.map((expense) => {
+				return <ExpenseItem key={expense.id} title={expense.title} date={expense.date} amount={expense.amount} />
+			})}
 		</div>
 	)
 }
