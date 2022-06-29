@@ -1,8 +1,9 @@
+import { useState } from "react"
+
 import Card from "./components/UI/Card"
 import Expenses from "./components/Expenses/Expenses"
 import NewExpense from "./components/NewExpense/NewExpense"
 import ExpensesChart from "./components/Expenses/ExpensesChart"
-import { useState } from "react"
 
 function App() {
 	const DUMMY_DATA = [
